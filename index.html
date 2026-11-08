@@ -23,13 +23,14 @@
 
     <style>
         :root {
-            --primary-dark: #022c22;
-            --primary-green: #064e3b;
-            --accent-green: #059669;
-            --accent-yellow: #eab308;
-            --accent-yellow-light: #fef08a;
-            --bg-light: #f0fdf4;
-            --text-main: #1e293b;
+            --primary-dark: #0f172a;
+            --primary-navy: #1e293b;
+            --accent-pink: #ec4899;
+            --accent-pink-dark: #be185d;
+            --accent-pink-light: #fdf2f8;
+            --accent-pink-border: #fbcfe8;
+            --bg-light: #f8fafc;
+            --text-main: #0f172a;
             --text-muted: #64748b;
         }
 
@@ -47,7 +48,7 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: var(--text-main);
-            background-color: #f8fafc;
+            background-color: var(--bg-light);
         }
 
         /* HEADER */
@@ -61,7 +62,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 3px solid var(--accent-yellow);
+            border-bottom: 3px solid var(--accent-pink);
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
@@ -72,13 +73,13 @@
         }
 
         .logo-icon {
-            background: var(--accent-yellow);
-            color: var(--primary-dark);
+            background: var(--accent-pink);
+            color: #fff;
             padding: 0.4rem 0.7rem;
             border-radius: 6px;
             font-weight: 800;
             font-size: 1.1rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 4px rgba(236,72,153,0.3);
         }
 
         header h1 {
@@ -87,7 +88,7 @@
         }
 
         header h1 span {
-            color: var(--accent-yellow);
+            color: var(--accent-pink);
         }
 
         nav {
@@ -105,22 +106,23 @@
         }
 
         nav a:hover {
-            color: var(--accent-yellow);
+            color: var(--accent-pink);
         }
 
         /* HERO SECTION */
         .hero {
-            background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-dark) 100%);
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-dark) 100%);
             color: white;
             padding: 3.5rem 1rem 2.5rem;
             text-align: center;
-            border-bottom: 4px solid var(--accent-yellow);
+            border-bottom: 4px solid var(--accent-pink);
         }
 
         .hero-badge {
             display: inline-block;
-            background: var(--accent-yellow-light);
-            color: #713f12;
+            background: var(--accent-pink-light);
+            color: var(--accent-pink-dark);
+            border: 1px solid var(--accent-pink-border);
             padding: 0.35rem 1rem;
             border-radius: 20px;
             font-size: 0.85rem;
@@ -138,7 +140,7 @@
         }
 
         .hero h2 span {
-            color: var(--accent-yellow);
+            color: var(--accent-pink);
         }
 
         .hero p {
@@ -166,7 +168,7 @@
 
         .stat-num {
             font-weight: 800;
-            color: var(--accent-yellow);
+            color: var(--accent-pink);
             font-size: 1.2rem;
         }
 
@@ -203,7 +205,7 @@
         }
 
         .search-input:focus {
-            border-color: var(--primary-green);
+            border-color: var(--accent-pink);
         }
 
         .category-tabs {
@@ -226,9 +228,9 @@
         }
 
         .tab-btn.active, .tab-btn:hover {
-            background: var(--primary-green);
-            color: var(--accent-yellow);
-            border-color: var(--primary-green);
+            background: var(--accent-pink);
+            color: #fff;
+            border-color: var(--accent-pink);
         }
 
         /* JOB GRID */
@@ -259,12 +261,12 @@
             left: 0;
             width: 4px;
             height: 100%;
-            background: var(--accent-yellow);
+            background: var(--accent-pink);
         }
 
         .job-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 16px rgba(236,72,153,0.12);
         }
 
         .job-header {
@@ -275,9 +277,9 @@
         }
 
         .job-badge {
-            background: var(--bg-light);
-            color: var(--primary-green);
-            border: 1px solid #a7f3d0;
+            background: var(--accent-pink-light);
+            color: var(--accent-pink-dark);
+            border: 1px solid var(--accent-pink-border);
             padding: 0.25rem 0.6rem;
             border-radius: 6px;
             font-size: 0.75rem;
@@ -286,9 +288,9 @@
 
         .job-pay {
             font-weight: 800;
-            color: #047857;
+            color: var(--accent-pink-dark);
             font-size: 0.9rem;
-            background: #ecfdf5;
+            background: var(--accent-pink-light);
             padding: 0.2rem 0.5rem;
             border-radius: 4px;
         }
@@ -330,8 +332,8 @@
         }
 
         .apply-btn {
-            background: var(--primary-dark);
-            color: var(--accent-yellow);
+            background: var(--accent-pink);
+            color: #fff;
             text-align: center;
             padding: 0.7rem;
             border-radius: 8px;
@@ -343,7 +345,7 @@
         }
 
         .apply-btn:hover {
-            background: var(--primary-green);
+            background: var(--accent-pink-dark);
             color: #fff;
         }
 
@@ -354,9 +356,9 @@
         }
 
         .load-btn {
-            background: var(--primary-green);
-            color: var(--accent-yellow);
-            border: 2px solid var(--accent-yellow);
+            background: var(--accent-pink);
+            color: #fff;
+            border: 2px solid var(--accent-pink);
             padding: 0.85rem 2.5rem;
             border-radius: 8px;
             font-size: 1rem;
@@ -366,7 +368,8 @@
         }
 
         .load-btn:hover {
-            background: var(--primary-dark);
+            background: var(--accent-pink-dark);
+            border-color: var(--accent-pink-dark);
             color: #fff;
         }
 
@@ -383,7 +386,7 @@
         .content-card h3 {
             color: var(--primary-dark);
             margin-bottom: 1rem;
-            border-bottom: 2px solid var(--accent-yellow);
+            border-bottom: 2px solid var(--accent-pink);
             padding-bottom: 0.5rem;
             font-size: 1.3rem;
         }
@@ -405,11 +408,11 @@
             text-align: center;
             padding: 3rem 1rem;
             margin-top: 4rem;
-            border-top: 3px solid var(--accent-yellow);
+            border-top: 3px solid var(--accent-pink);
         }
 
         footer a {
-            color: var(--accent-yellow);
+            color: var(--accent-pink);
             text-decoration: none;
         }
 
@@ -459,7 +462,7 @@
 
     <!-- HERO SECTION -->
     <section class="hero">
-        <span class="hero-badge">⭐ 150+ Open Roles • AI, Crowdsourcing & Writing</span>
+        <span class="hero-badge">💗 150+ Open Roles • AI, Crowdsourcing & Writing</span>
         <h2>Find Verified Remote Opportunities <span>Worldwide</span></h2>
         <p>Direct portal access to over 90 AI training & micro-task roles (Toloka, Clickworker, Populi, Claru) and 60+ remote freelancing & writing positions.</p>
         
@@ -486,10 +489,10 @@
             <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search roles, platforms (e.g., Toloka, Clickworker, Populi, Claru, Writing, Python)..." onkeyup="filterJobs()">
             
             <div class="category-tabs">
-                <button class="tab-btn active" onclick="filterCategory('all', this)">All Opportunities (150+)</button>
-                <button class="tab-btn" onclick="filterCategory('ai', this)">🤖 AI & Micro-tasks (90+)</button>
-                <button class="tab-btn" onclick="filterCategory('freelance', this)">💼 Freelance (40+)</button>
-                <button class="tab-btn" onclick="filterCategory('writing', this)">✍️ Writing (20+)</button>
+                <button class="tab-btn active" onclick="filterCategory('all', this)">All Opportunities</button>
+                <button class="tab-btn" onclick="filterCategory('ai', this)">🤖 AI & Micro-tasks</button>
+                <button class="tab-btn" onclick="filterCategory('freelance', this)">💼 Freelance</button>
+                <button class="tab-btn" onclick="filterCategory('writing', this)">✍️ Writing</button>
             </div>
         </div>
 
@@ -548,7 +551,75 @@
 
     <!-- DYNAMIC DATA ENGINE SCRIPT -->
     <script>
-        const allJobs = [];
+        const allJobs = [
+            // ================= NEW FEATURED ROLES (TOP PRIORITY) =================
+            {
+                id: 'featured-1',
+                category: 'ai',
+                badge: 'AI Training',
+                title: 'Multilingual AI Training Specialist (Kiswahili / English)',
+                company: 'Global AI Data Solutions • Remote (Worldwide)',
+                pay: '$25 - $45 / hr',
+                desc: 'Evaluate, annotate, and refine LLM training outputs, ensuring accuracy, cultural nuance, and syntactic correctness in Kiswahili and English data pairs.',
+                tags: ['AI Training', 'Multilingual', 'Annotation'],
+                url: 'https://dataannotation.tech'
+            },
+            {
+                id: 'featured-2',
+                category: 'ai',
+                badge: 'AI Training',
+                title: 'GenAI Prompt Engineer & Quality Rater',
+                company: 'Scale & Evaluation Networks • Remote (Worldwide)',
+                pay: '$30 - $55 / hr',
+                desc: 'Design complex prompts, test model responses against safety and alignment benchmarks, and grade multi-turn conversation quality.',
+                tags: ['Prompt Engineering', 'AI Rater', 'Evaluation'],
+                url: 'https://outlier.ai'
+            },
+            {
+                id: 'featured-3',
+                category: 'writing',
+                badge: 'Freelance Writing',
+                title: 'Technical Content Writer (SaaS & Developer Tools)',
+                company: 'CodeCraft Media • Remote (US, Europe, Africa)',
+                pay: '$35 - $60 / hr',
+                desc: 'Produce in-depth documentation, tutorials, and blog posts explaining modern web development, API integrations, and developer workflows.',
+                tags: ['Technical Writing', 'SaaS', 'Documentation'],
+                url: 'https://remotive.com'
+            },
+            {
+                id: 'featured-4',
+                category: 'writing',
+                badge: 'Freelance Writing',
+                title: 'Remote SEO Copywriter & Content Strategist',
+                company: 'GrowthPulse Digital • Remote (Worldwide)',
+                pay: '$28 - $50 / hr',
+                desc: 'Optimize existing web directories, write engaging meta descriptions, and craft long-form pillar content targeting global remote work queries.',
+                tags: ['SEO', 'Copywriting', 'Content Strategy'],
+                url: 'https://www.upwork.com'
+            },
+            {
+                id: 'featured-5',
+                category: 'freelance',
+                badge: 'Freelance',
+                title: 'Front-End UI/UX Contributor (HTML/CSS/JS)',
+                company: 'OpenWeb Projects • Remote (Worldwide)',
+                pay: '$30 - $55 / hr',
+                desc: 'Assist in building responsive, lightweight directory interfaces, optimizing mobile layouts, and implementing fast-loading client-side filters.',
+                tags: ['Front-End', 'HTML/CSS/JS', 'UI/UX'],
+                url: 'https://www.upwork.com'
+            },
+            {
+                id: 'featured-6',
+                category: 'freelance',
+                badge: 'Freelance',
+                title: 'Remote Transcription & Localization Specialist',
+                company: 'TranscribeGlobal Inc. • Remote (Worldwide)',
+                pay: '$20 - $40 / hr',
+                desc: 'Transcribe multi-accent audio files and localize audio datasets for speech-to-text machine learning pipeline training.',
+                tags: ['Transcription', 'Localization', 'Audio Data'],
+                url: 'https://www.clickworker.com'
+            }
+        ];
 
         // 1. Generate 90 AI Training & Crowdsourcing Micro-task Jobs
         const aiTitles = [
@@ -651,9 +722,11 @@
 
             const filtered = allJobs.filter(job => {
                 const matchesCat = (currentCategory === 'all' || job.category === currentCategory);
+                const tagMatch = job.tags.some(tag => tag.toLowerCase().includes(searchQuery));
                 const matchesSearch = job.title.toLowerCase().includes(searchQuery) ||
                                       job.company.toLowerCase().includes(searchQuery) ||
-                                      job.desc.toLowerCase().includes(searchQuery);
+                                      job.desc.toLowerCase().includes(searchQuery) ||
+                                      tagMatch;
                 return matchesCat && matchesSearch;
             });
 
@@ -684,7 +757,7 @@
                             ${job.tags.map(t => `<span class="tag">${t}</span>`).join('')}
                         </div>
                     </div>
-                    <a href="${job.url}" target="_blank" rel="noopener noreferrer" class="apply-btn">Apply on Portal</a>
+                    <a href="${job.url}" target="_blank" rel="noopener noreferrer" class="apply-btn">Apply</a>
                 `;
                 grid.appendChild(card);
             });
